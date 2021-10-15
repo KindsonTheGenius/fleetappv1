@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+  <meta name="author" content="GeeksLabs">
+  <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+  <link rel="shortcut icon" href="img/favicon.png">
+
+  <title>User Registration Page</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- bootstrap theme -->
+  <link href="css/bootstrap-theme.css" rel="stylesheet">
+  <!--external css-->
+  
+  <!-- font icon -->
+  <link href="css/elegant-icons-style.css" rel="stylesheet" />
+  <link href="css/font-awesome.css" rel="stylesheet" />
+  
+  <!-- Custom styles -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-responsive.css" rel="stylesheet" />
+  
+
+</head>
+
+<body class="login-img3-body">
+
+  <div class="container">
+    <form class="login-form" th:action="@{/users/addNew}" method="post">
+    <div style="text-align:center; color:#030606"><h3><strong>Register an account</strong></h3></div>
+      <div class="login-wrap">
+        <p class="login-img"><i class="icon_user_alt"></i></p>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="icon_profile"></i></span>
+          <input type="text" class="form-control" placeholder="Firstname" autofocus name="firstname">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="icon_profile"></i></span>
+          <input type="text" class="form-control" placeholder="Lastname" autofocus name="lastname">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="icon_profile"></i></span>
+          <input type="text" class="form-control" placeholder="Username or Email" autofocus name="username">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+          <input type="password" class="form-control" placeholder="Password" id="password" name="password">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+          <input type="password" class="form-control" placeholder="Confirm Password" id="confirmPassword">
+        </div>
+        <label class="checkbox">
+                <span><a th:href="@{/login}" value="remember-me"> Login Page</a></span>
+                <span class="pull-right"> <a th:href="@{/forgot-password}"> Forgot Password?</a></span>
+        </label>
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Register</button>
+      </div>
+    </form>
+    <div class="text-right">
+      <div class="credits">
+          Designed by <a href="https://www.kindsonthegenius.com/">KindsonTheGenius</a>
+        </div>
+    </div>
+  </div>
+  
+    <!-- javascripts -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  
+  <script type="text/javascript" src="static/js/register.js" th:src="@{/js/register.js}"></script>
+</body>
+
+</html>

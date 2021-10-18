@@ -24,6 +24,7 @@ public class ApplicationController {
 //	public String oauthLogin() {
 //		return "http://localhost:8080/login/oauth2/code/google";
 //	}
+
 	
 	@GetMapping("/register")
 	public String register() {
@@ -39,6 +40,5 @@ public class ApplicationController {
 	public String blank() {
 		return "blank";
 	}
-
 
 }

@@ -15,8 +15,6 @@ import org.springframework.web.servlet.view.RedirectView;
 
 import com.kindsonthegenius.fleetms.models.User;
 import com.kindsonthegenius.fleetms.services.UserService;
-import com.kindsonthegenius.fleetms.services.CountryService;
-import com.kindsonthegenius.fleetms.services.UserService;
 
 @Controller
 public class UserController {
@@ -32,7 +30,7 @@ public class UserController {
 	
 	@RequestMapping("users/findById") 
 	@ResponseBody
-	public Optional<User> findById(Integer id)
+	public User findById(Integer id)
 	{
 		return userService.findById(id);
 	}

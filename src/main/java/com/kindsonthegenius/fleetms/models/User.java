@@ -1,6 +1,8 @@
 package com.kindsonthegenius.fleetms.models;
 
 import javax.persistence.*;
+
+import com.kindsonthegenius.fleetms.security.models.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,5 +23,13 @@ public class User {
     private String lastname;
 	private String username;
 	private String password;
+
+	@ManyToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
+            @JoinTable(
+                    name = "user_role",
+                    joinColumns = {@JoinColumn(name = "user_id")},
+                    inverseJoinColumns = {@JoinColumn(name = "role_id")}
+            )
+	Set<Role> roles = new HashSet<>();
 
 }

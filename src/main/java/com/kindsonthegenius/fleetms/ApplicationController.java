@@ -25,6 +25,10 @@ public class ApplicationController {
 //		return "http://localhost:8080/login/oauth2/code/google";
 //	}
 
+	@GetMapping("/accessDenied")
+	public String accessDenied(){
+		return "accessDenied";
+	}
 	
 	@GetMapping("/register")
 	public String register() {

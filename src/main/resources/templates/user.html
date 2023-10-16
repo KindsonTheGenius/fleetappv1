@@ -434,12 +434,17 @@
                     <th><i class="icon_profile"></i> Firstname</th>
                     <th><i class="icon_profile"></i>Lastname</th>
                       <th><i class="icon_profile"></i>Username</th>
+                      <th></th>
                     <th><i class="icon_cogs"></i> Action</th>
                   </tr>
 				 <tr th:each="user:${users}">
 					<td th:text="${user.firstname}">Firstname</td>
 					<td th:text="${user.lastname}">Lastname</td>
                      <td th:text="${user.username}">Username</td>
+                     <td>
+                         <a  th:href="@{'/security/user/Edit/'+${user.id}}"
+                             class="btn btn-default"><i class="icon_pencil-edit"></i>Manage Roles</a>
+                     </td>
                      <td>
                       <div class="btn-group">
                         <a class="btn btn-primary" id="editButton" th:href="@{/users/findById/(id=${user.id})}"><i class="icon_pencil-edit"></i></a>
